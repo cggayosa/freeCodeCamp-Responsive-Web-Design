@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <header id="navbar">
+    <div class="logo">Caitlin Gayosa</div>
+    <nav>
+      <a href="#welcome-section">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#survey-section">Survey</a>
+      <a href="#contact">Contact</a>
+      <a id="profile-link" href="https://github.com/cggayosa" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <section id="welcome-section">
+    <div class="welcome-card">
+      <img src="https://via.placeholder.com/140" alt="Profile picture">
+      <h1>Hello, I'm Caitlin</h1>
+      <p>Aspiring AI/ML Developer</p>
+    </div>
+  </section>
+
+  <main>
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-tile">
+        <img class="project-img" src="https://via.placeholder.com/400x200" alt="Tribute Page">
+        <h3>Tribute Page</h3>
+        <p>A clean tribute page built with semantic HTML and responsive CSS.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-tile">
+        <img class="project-img" src="https://via.placeholder.com/400x200" alt="Product Landing">
+        <h3>Product Landing</h3>
+        <p>Responsive landing page showcasing a product with a signup form.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-tile">
+        <img class="project-img" src="https://via.placeholder.com/400x200" alt="Technical Doc">
+        <h3>Technical Doc</h3>
+        <p>Documentation template with sticky navigation and clear sections.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-tile">
+        <img class="project-img" src="https://via.placeholder.com/400x200" alt="Survey Form">
+        <h3>Survey Form</h3>
+        <p>A responsive survey form project demonstrating form controls and validation.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-tile">
+        <img class="project-img" src="https://via.placeholder.com/400x200" alt="Portfolio V1">
+        <h3>Portfolio V1</h3>
+        <p>My first portfolio iteration using basic HTML and CSS.</p>
+        <a href="#">View Project</a>
+      </div>
+    </section>
+
+    <section id="survey-section">
+      <form id="survey-form">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Help me improve by filling out this quick survey!</p>
+
+        <label id="name-label" for="name">Name
+          <input id="name" type="text" placeholder="Enter your name" required>
+        </label>
+
+        <label id="email-label" for="email">Email
+          <input id="email" type="email" placeholder="Enter your email" required>
+        </label>
+
+        <label id="number-label" for="number">Age
+          <input id="number" type="number" min="10" max="100" placeholder="Enter your age">
+        </label>
+
+        <label for="dropdown">What best describes you?
+          <select id="dropdown">
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <legend>Preferred Contact:</legend>
+          <label><input type="radio" name="contact" value="email"> Email</label>
+          <label><input type="radio" name="contact" value="phone"> Phone</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills:</legend>
+          <label><input type="checkbox" value="html"> HTML</label>
+          <label><input type="checkbox" value="css"> CSS</label>
+          <label><input type="checkbox" value="js"> JavaScript</label>
+        </fieldset>
+
+        <label for="comments" style="display:block;margin-top:12px;">Additional comments
+          <textarea id="comments" name="comments" rows="4" placeholder="Anything else you want to tell us?"></textarea>
+        </label>
+
+        <input id="submit" type="submit" class="btn" value="Submit">
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p style="color:var(--muted);text-align:center">Want to work together? Send me a message or use the form below.</p>
+      <form id="contact-form" action="https://www.freecodecamp.com/email-submit" method="POST" novalidate>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <label for="name-contact" style="flex:1 1 220px;">
+            Name
+            <input id="name-contact" name="name" type="text" placeholder="Your name" required>
+          </label>
+          <label for="email-contact" style="flex:1 1 220px;">
+            Email
+            <input id="email-contact" name="email" type="email" placeholder="your@email.com" required>
+          </label>
+        </div>
+        <label for="comments-contact" style="display:block;margin-top:12px;">
+          Additional comments
+          <textarea id="comments-contact" name="comments" rows="4" placeholder="Anything else you want to tell me?"></textarea>
+        </label>
+        <div style="margin-top:12px;text-align:center;">
+          <button id="submit-contact" type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Caitlin Gayosa. All rights reserved.</p>
+  </footer>
+</body>
+</html>
