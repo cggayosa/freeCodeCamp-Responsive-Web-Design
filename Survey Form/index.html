@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UAAP Fan Survey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 id="title">UAAP Season 88 Fan Survey</h1>
+      <p id="description">Tell us about your UAAP game experience, favorite teams, and match-day traditions. Your feedback helps us plan better fan events.</p>
+    </header>
+
+    <form id="survey-form" action="#" method="GET" class="survey-form">
+
+      <div class="form-group">
+        <label id="name-label" for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="youremail@example.com" required />
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number">How many UAAP games have you attended this season?</label>
+        <input id="number" name="games_attended" type="number" min="0" max="100" placeholder="e.g. 3" />
+        <small class="hint">Enter a number between 0 and 100.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="dropdown">Which UAAP sport do you watch most often?</label>
+        <select id="dropdown" name="favorite_sport" required>
+          <option value="" disabled selected>Select a sport</option>
+          <option value="basketball">Basketball</option>
+          <option value="volleyball">Volleyball</option>
+          <option value="cheerdance">Cheerdance</option>
+          <option value="football">Football</option>
+          <option value="badminton">Badminton</option>
+          <option value="taekwondo">Taekwondo</option>
+          <option value="chess">Chess</option>
+          <option value="swimming">Swimming</option>
+          <option value="table-tennis">Table Tennis</option>
+          <option value="tennis">Tennis</option>
+          <option value="baseball">Baseball</option>
+          <option value="softball">Softball</option>
+          <option value="track-and-field">Track and Field</option>
+          <option value="esports">Esports</option>
+          <option value="street-dance">Streetdance</option>
+        </select>
+      </div>
+
+      <fieldset class="form-group">
+        <legend>How do you usually watch games?</legend>
+        <label class="option">
+          <input type="radio" name="watch_mode" value="in_person" /> In Person
+        </label>
+        <label class="option">
+          <input type="radio" name="watch_mode" value="stream_tv" /> Stream / TV
+        </label>
+        <label class="option">
+          <input type="radio" name="watch_mode" value="both" /> Both
+        </label>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Which teams do you support? (pick any)</legend>
+        <label class="option">
+          <input type="checkbox" name="teams" value="up" /> UP
+        </label>
+        <label class="option">
+          <input type="checkbox" name="teams" value="admu" /> ADMU
+        </label>
+        <label class="option">
+          <input type="checkbox" name="teams" value="DLSU" /> DLSU
+        </label>
+        <label class="option">
+          <input type="checkbox" name="teams" value="ust" /> UST
+        </label>
+                <label class="option">
+          <input type="checkbox" name="teams" value="adu" /> ADU
+        </label>
+                <label class="option">
+          <input type="checkbox" name="teams" value="feu" /> FEU
+        </label>
+        <label class="option">
+          <input type="checkbox" name="teams" value="ue" /> UE
+        </label>
+        <label class="option">
+          <input type="checkbox" name="teams" value="NU" /> NU
+        </label>
+       
+      </fieldset>
+
+      <div class="form-group">
+        <label for="comments">Any memorable match-day moments or suggestions?</label>
+        <textarea id="comments" name="comments" rows="5" placeholder="Share a story or suggestions."></textarea>
+      </div>
+
+      <div class="form-group">
+        <button id="submit" type="submit" class="btn">Submit Survey</button>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <small>&copy; 2025 UAAP Fan Survey. Built as a freeCodeCamp Project.</small>
+    </footer>
+  </main>
+</body>
+</html>
