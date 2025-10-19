@@ -1,0 +1,146 @@
+:root {
+  --bg: #f7faf7;
+  --card: #ffffff;
+  --accent: gold;
+  --muted: #6b6b6b;
+
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 900px;
+  margin: 28px auto;
+  padding: 18px;
+}
+
+.header {
+  margin-bottom: 18px;
+  padding: 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #fff 0, #f6fff6 100%);
+  box-shadow: 0 6px 18px rgba(20, 80, 30, 0.03);
+}
+
+#title {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+#description {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.survey-form {
+  display: block;
+  background: var(--card);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(10, 20, 10, 0.04);
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6efe7;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.hint {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+fieldset {
+  border: 1px solid #eef6ed;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+fieldset legend {
+  font-weight: 700;
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 12px;
+  margin-top: 8px;
+}
+
+.option input {
+  transform: scale(1.05);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.footer {
+  margin-top: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin: 12px;
+    padding: 12px;
+  }
+
+  #title {
+    font-size: 1.35rem;
+  }
+
+  .option {
+    display: block;
+  }
+}
