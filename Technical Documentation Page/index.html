@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Java OOP Tutorial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Java OOP Tutorial</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Classes_&_Objects">Classes & Objects</a>
+    <a class="nav-link" href="#Inheritance">Inheritance</a>
+    <a class="nav-link" href="#Polymorphism">Polymorphism</a>
+    <a class="nav-link" href="#Examples">Examples</a>
+    <a class="nav-link" href="#FAQ">FAQ</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Object-Oriented Programming (OOP) in Java is a paradigm that organizes software design around objects rather than functions and logic.</p>
+      <p>Key principles of OOP:</p>
+      <ul>
+        <li>Encapsulation — binding data and methods together</li>
+        <li>Inheritance — reuse of code through class hierarchies</li>
+        <li>Polymorphism — one interface, many implementations</li>
+        <li>Abstraction — hiding details and exposing essentials</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Classes_&_Objects">
+      <header>Classes & Objects</header>
+      <p>A <strong>class</strong> is a blueprint for creating objects. An <strong>object</strong> is an instance of a class.</p>
+      <pre><code class="language-java">class Car {
+  String brand;
+  int year;
+
+  void drive() {
+    System.out.println(brand + " is driving.");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Car myCar = new Car();
+    myCar.brand = "Toyota";
+    myCar.year = 2025;
+    myCar.drive();
+  }
+}</code></pre>
+    </section>
+
+    <section class="main-section" id="Inheritance">
+      <header>Inheritance</header>
+      <p>Inheritance allows a class to acquire properties and methods of another class.</p>
+      <pre><code class="language-java">class Animal {
+  void sound() {
+    System.out.println("Some sound");
+  }
+}
+
+class Dog extends Animal {
+  void sound() {
+    System.out.println("Bark");
+  }
+}</code></pre>
+      <ul>
+        <li>Promotes code reusability</li>
+        <li>Establishes parent–child relationships</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Polymorphism">
+      <header>Polymorphism</header>
+      <p>Polymorphism allows the same method name to behave differently depending on the object.</p>
+      <pre><code class="language-java">class Shape {
+  void draw() {
+    System.out.println("Drawing a shape");
+  }
+}
+
+class Circle extends Shape {
+  void draw() {
+    System.out.println("Drawing a circle");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Shape s1 = new Shape();
+    Shape s2 = new Circle();
+    s1.draw(); // "Drawing a shape"
+    s2.draw(); // "Drawing a circle"
+  }
+}</code></pre>
+    </section>
+
+    <section class="main-section" id="Examples">
+      <header>Examples</header>
+      <p>Putting it all together:</p>
+      <pre><code class="language-java">abstract class Vehicle {
+  abstract void move();
+}
+
+class Car extends Vehicle {
+  void move() {
+    System.out.println("Car drives on roads.");
+  }
+}
+
+class Airplane extends Vehicle {
+  void move() {
+    System.out.println("Airplane flies in the sky.");
+  }
+}
+
+public class Demo {
+  public static void main(String[] args) {
+    Vehicle v1 = new Car();
+    Vehicle v2 = new Airplane();
+    v1.move();
+    v2.move();
+  }
+}</code></pre>
+    </section>
+
+    <section class="main-section" id="FAQ">
+      <header>FAQ</header>
+      <p><strong>Q: Why use Object-Oriented Programming (OOP)?</strong></p>
+      <p>A: It makes programs modular, reusable, and easier to maintain.</p>
+      <p><strong>Q: Is everything in Java an object?</strong></p>
+      <p>A: Almost. Primitive types like <code>int</code>, <code>double</code> are not, but Java provides wrapper classes.</p>
+      <ul>
+        <li>Java is strongly typed</li>
+        <li>Supports single inheritance (but multiple interfaces)</li>
+        <li>Encourages modular design</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
